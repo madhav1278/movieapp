@@ -15,7 +15,7 @@ const HomeStack = () => (
     <Stack.Screen 
       name="Home" 
       component={HomeScreen} 
-      options={{ headerShown: false }} // Hide header for HomeStack
+      options={{ headerShown: false }} 
     />
     <Stack.Screen name="Details" component={Detailsscreen} />
   </Stack.Navigator>
@@ -26,7 +26,7 @@ const SearchStack = () => (
     <Stack.Screen 
       name="Search" 
       component={Searchscreen} 
-      options={{ headerShown: false }} // Hide header for SearchStack
+      options={{ headerShown: false }} 
     />
     <Stack.Screen name="Details" component={Detailsscreen} />
   </Stack.Navigator>
@@ -58,4 +58,4 @@ export default function App() {
   );
 } 
 
-// bhfy
+
