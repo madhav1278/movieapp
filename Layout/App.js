@@ -12,14 +12,22 @@ const Tab = createBottomTabNavigator();
 
 const HomeStack = () => (
   <Stack.Navigator>
-    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen 
+      name="Home" 
+      component={HomeScreen} 
+      options={{ headerShown: false }} // Hide header for HomeStack
+    />
     <Stack.Screen name="Details" component={Detailsscreen} />
   </Stack.Navigator>
 );
 
 const SearchStack = () => (
   <Stack.Navigator>
-    <Stack.Screen name="Search" component={Searchscreen} />
+    <Stack.Screen 
+      name="Search" 
+      component={Searchscreen} 
+      options={{ headerShown: false }} // Hide header for SearchStack
+    />
     <Stack.Screen name="Details" component={Detailsscreen} />
   </Stack.Navigator>
 );
@@ -35,38 +43,17 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="SplashScreen">
-        
-        <Stack.Screen name="SplashScreen" component={Splashscreen} options={{ headerShown: false }} />
-        <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
-
+        <Stack.Screen 
+          name="SplashScreen" 
+          component={Splashscreen} 
+          options={{ headerShown: false }} 
+        />
+        <Stack.Screen 
+          name="Main" 
+          component={MainTabs} 
+          options={{ headerShown: false }} 
+        />
       </Stack.Navigator>
-
-    
-
     </NavigationContainer>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
